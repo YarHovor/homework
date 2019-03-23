@@ -1,0 +1,28 @@
+strong {
+    color: red;
+
+}
+em {
+    color: blue;
+    font-weight: bold;
+}
+h1 {
+    color: red;
+    text-align: center;
+}
+h2 {
+    color: darkgreen;
+}
+#left {
+    width: 500px;
+    text-align: justify;
+}
+ol {
+    color: red;
+}
+ul {
+    font-style: italic;
+    color: #924763;
+}
+
+
