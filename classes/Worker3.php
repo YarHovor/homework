@@ -4,7 +4,7 @@
 
 class Worker3 // Сделал класс Worker3
 {
-    private $name, $age, $salary; // объявил поля private
+    private $name, $age; // объявил поля private
 
     //об'євив методи (тіпа функції)
 
@@ -29,26 +29,18 @@ class Worker3 // Сделал класс Worker3
             $this->age=$age;
         }
     }
-    //методи для получення та обробки зарплатні
-    public function getSalary()
-    {
-        return $this->salary;
-    }
-    public function setSalary($salary)
-    {
-        $this->salary=$salary;
-    }
     //приват метод checkAge
     private function checkAge($age)// метод получає значення віку
     {
         if($age >=1 and $age <= 100)
         {
-            return true;
+            $check = true;
         }
         else
         {
-            return true;
+            $check = false;
         }
+        return $check;
     }
 
 }
@@ -56,24 +48,21 @@ class Worker3 // Сделал класс Worker3
 $vanya = new Worker3();// об'єкт Ваня який відноситься до класу Воркер2
 $vanya->setName('Іван');//в об'єкті ваня визвали сетНейм для завдання параметру імя
 $vanya->setAge(25);// задали парметр вік
-$vanya->setSalary(1000);// завдали парметр зарплатні
 
 $vasy = new Worker3();//об'єкт Вася який теж відноситься до класу Воркер2
 //таке як було з об'єктов Іван
 $vasy->setName('Вася');
 $vasy->setAge(26);
-$vasy->setSalary(2000);
 
 // теппер виводимо на екран, з-за допомогою методів гет****
 echo "Завдання 3 <br>";
-echo "Сума віку " . $vanya->getName() . " та " .  $vasy->getName() . ": " . ($vanya->getAge()+$vasy->getAge()) . "<br>";//
-echo "Сума зарплатні " . $vanya->getName() .  " та " .  $vasy->getName() . ": " . ($vanya->getSalary()+$vasy->getSalary() .' $');//
+echo "Вік " . $vanya->getName() ." - ". $vanya->getAge() . " та " .  $vasy->getName() . " - " . $vasy->getAge() . "<br>";//
 //
 //Дополните класс Worker из предыдущей задачи private методом checkAge,
 // который будет проверять возраст на корректность (от 1 до 100 лет).
 // Этот метод должен использовать метод setAge перед установкой нового возраста
 // (если возраст не корректный - он не должен меняться).
 
-// - В ЯКОМУ СЕНСІ ВІН НЕ ПОВИНЕН МІНЯТИСЯ, АДЖЕ ЯКЩО БУДЕ БІЛЬШЕ ТО ДОЛЖНА БУТИ ПОМИЛКА,
-// і як його тоді правильно відобразити програмно ???
+// - а як правильно зробити, щоб якщо не правильний вік, то воно би писало "невірно"
+//
 // - зробив по примеру який був в теорії
